@@ -4,18 +4,14 @@ $purple: #000000;
 $cut: 768px;
 $background: url('../img/space-min.jpg');
 
-.content .site-title{
-  color:#008fff;
-  font-weight:300;
-}
 
 .floating {
     -webkit-animation-name: Floatingx;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
+    -moz-animation-duration: 4s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
 
@@ -33,11 +29,11 @@ $background: url('../img/space-min.jpg');
     to {-moz-transform: translate(-50%,  -75%);}  
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Mono', monospace;
   overflow:hidden;
 }
 
@@ -112,6 +108,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   .site-title {
+    color:#008fff;
+    font-weight:300;
     font-size: 50px;
     display: block;
     line-height: 1;
@@ -149,9 +147,9 @@ body {
   .icon {
     text-align: center;
     color: #FFF;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
     padding: 10px;
     margin: 2px;
     border-radius: 50%;
@@ -166,9 +164,9 @@ body {
       background: #FFF;
     }
     @media only screen and (min-width:$cut) {
-      width: 35px;
-      height: 35px;
-      font-size: 35px;
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
     }
   }
 }
