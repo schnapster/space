@@ -1,13 +1,44 @@
-$main: #1a222c;
-$sec: #4B5664;
-$purple: #54516A;
+$main: #161618;
+$sec: #000000;
+$purple: #000000;
 $cut: 768px;
+$background: url('../img/space-min.jpg');
+
+.content .site-title{
+  color:#008fff;
+  font-weight:300;
+}
+
+.floating {
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(-50%, -75%);}
+    35% {-webkit-transform:translate(-50%,  -70%);}
+    to {-webkit-transform: translate(-50%,  -75%);}    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(-50%, -75%);}
+    35% {-moz-transform:translate(-50%,  -70%);}
+    to {-moz-transform: translate(-50%,  -75%);}  
+}
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  overflow:hidden;
 }
 
 @-webkit-keyframes pulse {
@@ -55,13 +86,14 @@ body {
 }
 
 #particles-js {
-  background: $main;
+  background: $background;
   display: block;
   vertical-align: bottom;
   width: 100vw;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left center;
   background-attachment: fixed;
   .particles-js-canvas-el {
     width:100vw !important;
