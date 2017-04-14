@@ -1,9 +1,40 @@
 $main: #161618;
-$sec: #000000;
-$purple: #000000;
 $cut: 768px;
 $background: url('../img/space-min.jpg');
+$backgroundsmall: url('../img/space-min-small.jpg');
 
+
+@import url('https://fonts.googleapis.com/css?family=Space+Mono');
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  overflow:hidden;
+  background: $main;
+}
+
+#particles-js {
+  background: $backgroundsmall;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  @media only screen and (min-width:$cut) {
+    background: $background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  display: block;
+  vertical-align: bottom;
+  width: 100vw;
+  min-height: 100vh;
+  .particles-js-canvas-el {
+    width:100vw !important;
+    height:100vh !important;
+  }
+}
 
 .floating {
     -webkit-animation-name: Floatingx;
@@ -27,74 +58,6 @@ $background: url('../img/space-min.jpg');
     from {-moz-transform:translate(-50%, -75%);}
     35% {-moz-transform:translate(-50%,  -70%);}
     to {-moz-transform: translate(-50%,  -75%);}  
-}
-
-@import url('https://fonts.googleapis.com/css?family=Space+Mono');
-
-body {
-  margin: 0;
-  font-family: 'Space Mono', monospace;
-  overflow:hidden;
-}
-
-@-webkit-keyframes pulse {
-    from {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0;
-    }
-    50% {
-        -ms-filter: none;
-        -webkit-filter: none;
-        filter: none;
-        opacity: 1;
-        top: -10px;
-    }
-    to {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0;
-    }
-}
-
-@keyframes pulse {
-    from {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0
-    }
-    50% {
-        -ms-filter: none;
-        -webkit-filter: none;
-        filter: none;
-        opacity: 1;
-        top: -10px
-    }
-    to {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-        filter: alpha(opacity=40);
-        opacity: .4;
-        top: 0
-    }
-}
-
-#particles-js {
-  background: $background;
-  display: block;
-  vertical-align: bottom;
-  width: 100vw;
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left center;
-  background-attachment: fixed;
-  .particles-js-canvas-el {
-    width:100vw !important;
-    height:100vh !important;
-  }
 }
 
 .content {
@@ -127,17 +90,6 @@ body {
       font-size: 40px;
     }
   }
-  .link {
-    color: #FFF;
-    display: inline-flex;
-    justify-content: space-between;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 20px;
-    }
-  }
 }
 
 .icons-header {
@@ -167,137 +119,6 @@ body {
       width: 50px;
       height: 50px;
       font-size: 50px;
-    }
-  }
-}
-
-.down {
-  color: #FFF;
-  position: absolute;
-  bottom: 25px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  cursor: pointer;
-  .icon {
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
-      fill: #fff;
-      -webkit-animation: pulse 1.3s infinite;
-      animation: pulse 1.3s infinite;
-      &:hover {
-        color: $sec;
-      }
-      &:active {
-        color: $sec;
-      }
-  }
-}
-
-.user {
-  text-align: center;
-  margin: 20px auto;
-  font-size: 60px;
-  p {
-    font-size: 16px;
-  }
-  @media only screen and (min-width: $cut) {
-    font-size: 75px;
-  }
-}
-
-.user-details {
-  text-align: center;
-  font-size: 16px;
-  margin: 10px auto;
-}
-
-.user-projects {
-  margin: 40px auto;
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  h5 {
-    margin: 0;
-  }
-  li {
-    color: $main;
-    font-size: 1.1rem;
-  }
-  p {
-    margin-right: 5px;
-  }
-}
-
-.images {
-  @media only screen and (min-width: $cut) {
-    float: right;
-  }
-}
-
-.project-link {
-  display: block;
-  width: 100px;
-  margin: 10px 0px;
-  padding: 5px;
-  color: $main;
-  background-color: transparent;
-  border: 1px solid $main;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
-  &:hover {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
-  &:active {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
-}
-
-.footer {
-  background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
-  text-align: center;
-  color: #FFF;
-  .love {
-    color: red;
-  }
-  a {
-    text-decoration: none;
-    margin: 0;
-    color: #FFF;
-    &:hover{
-      color: $sec;
-    }
-    &:active {
-      color: $sec;
     }
   }
 }
