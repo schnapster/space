@@ -1,8 +1,4 @@
-/* sweetScroll load */
-document.addEventListener("DOMContentLoaded", function () {
-  //const sweetScroll = new SweetScroll({/* some options */});
-
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+function init() {
   particlesJS('particles-js', {
     "particles": {
       "number": {
@@ -115,4 +111,4 @@ document.addEventListener("DOMContentLoaded", function () {
     "retina_detect": true
   });
 
-}, false);
+};
