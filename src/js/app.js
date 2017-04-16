@@ -1,4 +1,3 @@
-function init() {
   particlesJS('particles-js', {
     "particles": {
       "number": {
@@ -110,5 +109,3 @@ function init() {
     },
     "retina_detect": true
   });
-
-};
