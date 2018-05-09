@@ -20,4 +20,4 @@ twitch_username: n_pster
 #google-analytics:
 #  id: ""
 
-exclude: ['package.json', 'src' , 'node_modules']
+exclude: ['package.json', 'src' , 'node_modules', 'package-lock.json', 'yarn.lock', 'gulpfile.js']
