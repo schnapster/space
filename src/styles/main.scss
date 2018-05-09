@@ -23,7 +23,7 @@ need to generate new file tho if adding icons: http://fontello.com/*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?56391821#fontello') format('svg');
+    src: url('../fonts/fontello.svg') format('svg');
   }
 }
 */
@@ -65,6 +65,7 @@ need to generate new file tho if adding icons: http://fontello.com/*/
 .icon-key:before { content: '\e800'; } /* '' */
 .icon-patreon:before { content: '\e801'; } /* '' */
 .icon-twitch_icon:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\f099'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */
 
