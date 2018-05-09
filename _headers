@@ -1,0 +1,8 @@
+/*
+  X-Frame-Options:         DENY
+  X-XSS-Protection:        1; mode=block
+  Content-Security-Policy: default-src 'self'; script-src 'self'
+  Cache-Control:           public, max-age=3600
+
+/assets/*
+  Cache-Control:           public, max-age=604800
