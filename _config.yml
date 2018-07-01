@@ -21,4 +21,4 @@ twitch_username: n_pster
 #  id: ""
 
 exclude: ['package.json', 'src' , 'node_modules', 'package-lock.json', 'yarn.lock', 'gulpfile.js']
-include: ['_headers']
+include: ['_headers', '_redirects']
