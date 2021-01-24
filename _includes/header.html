@@ -1,3 +1,8 @@
+<div id="audio-overlay">
+  <iframe id="audio-player" src="" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+  <a id="audio-button" aria-label="Toggle AudioPlayer" onclick="toggleAudioPlayer()"><span class="icon fo icon-music"></span></a
+</div>
+
 <div id="particles-js">
   <div class="content floating">
       <h1>
@@ -9,7 +14,21 @@
         <a aria-label="My Twitter" target="_blank" rel="noopener" href="https://twitter.com/{{site.twitter_username}}"><span class="icon fo icon-twitter"></span></a>
         <a aria-label="My Github" target="_blank" rel="noopener" href="https://github.com/{{site.github_username}}"><span class="icon fo icon-github-circled"></span></a>
         <a aria-label="My Keybase" target="_blank" rel="noopener" href="https://keybase.io/{{site.keybase_username}}"><span class="icon fo icon-key"></span></a>
-        <a aria-label="My Twitch" target="_blank" rel="noopener" href="https://twitch.tv/{{site.twitch_username}}"><span class="icon fo icon-twitch_icon"></span></a>      
+        <a aria-label="My Twitch" target="_blank" rel="noopener" href="https://twitch.tv/{{site.twitch_username}}"><span class="icon fo icon-twitch"></span></a>
       </div>
   </div>
 </div>
+
+<script>
+	function toggleAudioPlayer() {
+		const audioPlayer = document.getElementById("audio-player");
+		const current = audioPlayer.style.visibility;
+        if (current !== "visible") {
+          audioPlayer.src = "https://www.youtube-nocookie.com/embed/rDBbaGCCIhk?autoplay=1&loop=1"
+          audioPlayer.style.visibility = "visible";
+        } else {
+          audioPlayer.src = "";
+          audioPlayer.style.visibility = "hidden";
+        }
+	}
+</script>

@@ -62,12 +62,13 @@ need to generate new file tho if adding icons: http://fontello.com/*/
   text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
 }
  
-.icon-key:before { content: '\e800'; } /* '' */
-.icon-patreon:before { content: '\e801'; } /* '' */
-.icon-twitch_icon:before { content: '\e802'; } /* '' */
+.icon-volume-up:before { content: '\e800'; } /* '' */
+.icon-key:before { content: '\e801'; } /* '' */
+.icon-music:before { content: '\e802'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-twitch:before { content: '\f1e8'; } /* '' */
 
 /*fontello end*/
 
@@ -241,5 +242,26 @@ body {
       height: 80px;
       font-size: 80px;
     }
+  }
+}
+
+#audio-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  #audio-player {
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+    visibility: hidden;
+  }
+
+  #audio-button {
+    color: #FFF;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
