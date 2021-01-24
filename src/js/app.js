@@ -114,7 +114,7 @@ function toggleAudioPlayer() {
     const audioPlayer = document.getElementById("audio-player");
     const current = audioPlayer.style.visibility;
     if (current !== "visible") {
-      audioPlayer.src = "https://www.youtube-nocookie.com/embed/rDBbaGCCIhk?autoplay=1&loop=1"
+      audioPlayer.src = "https://www.youtube-nocookie.com/embed/rDBbaGCCIhk?autoplay=1&playlist=rDBbaGCCIhk&loop=1"
       audioPlayer.style.visibility = "visible";
     } else {
       audioPlayer.src = "";
