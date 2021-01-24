@@ -111,9 +111,15 @@
   });
 
 const audioPlayer = document.getElementById("audio-player");
+const audioButton = document.getElementById("audio-button");
 
 if (window.localStorage.getItem('music')) {
   turnOnAudioPlayer();
+}
+
+function handleAudioButtonClick(event) {
+  event.preventDefault();
+  toggleAudioPlayer();
 }
 
 function toggleAudioPlayer() {
@@ -137,4 +143,5 @@ function turnOffAudioPlayer() {
   audioPlayer.style.visibility = "hidden";
 }
 
-document.getElementById("audio-button").addEventListener("click touchstart", toggleAudioPlayer);
+audioButton.addEventListener("touchstart", handleAudioButtonClick);
+audioButton.addEventListener("click", handleAudioButtonClick);
