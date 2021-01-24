@@ -110,16 +110,31 @@
     "retina_detect": true
   });
 
+const audioPlayer = document.getElementById("audio-player");
+
+if (window.localStorage.getItem('music')) {
+  turnOnAudioPlayer();
+}
+
 function toggleAudioPlayer() {
-    const audioPlayer = document.getElementById("audio-player");
     const current = audioPlayer.style.visibility;
     if (current !== "visible") {
-      audioPlayer.src = "https://www.youtube-nocookie.com/embed/rDBbaGCCIhk?autoplay=1&playlist=rDBbaGCCIhk&loop=1"
-      audioPlayer.style.visibility = "visible";
+      turnOnAudioPlayer()
     } else {
-      audioPlayer.src = "";
-      audioPlayer.style.visibility = "hidden";
+      turnOffAudioPlayer()
     }
+}
+
+function turnOnAudioPlayer() {
+  window.localStorage.setItem('music', 1)
+  audioPlayer.src = "https://www.youtube-nocookie.com/embed/rDBbaGCCIhk?autoplay=1&playlist=rDBbaGCCIhk&loop=1&modestbranding=1"
+  audioPlayer.style.visibility = "visible";
+}
+
+function turnOffAudioPlayer() {
+  window.localStorage.removeItem('music')
+  audioPlayer.src = "";
+  audioPlayer.style.visibility = "hidden";
 }
 
 document.getElementById("audio-button").addEventListener("click", toggleAudioPlayer);
