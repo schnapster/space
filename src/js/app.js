@@ -137,4 +137,4 @@ function turnOffAudioPlayer() {
   audioPlayer.style.visibility = "hidden";
 }
 
-document.getElementById("audio-button").addEventListener("click", toggleAudioPlayer);
+document.getElementById("audio-button").addEventListener("click touchstart", toggleAudioPlayer);
