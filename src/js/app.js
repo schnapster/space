@@ -121,3 +121,5 @@ function toggleAudioPlayer() {
       audioPlayer.style.visibility = "hidden";
     }
 }
+
+document.getElementById("audio-button").addEventListener("click", toggleAudioPlayer);
