@@ -166,7 +166,7 @@ body {
     -moz-animation-duration: 4s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
-
+	will-change: transform;
 }
 
 @-webkit-keyframes Floatingx{
